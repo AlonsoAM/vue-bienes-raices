@@ -1,16 +1,17 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
   <v-card elevation="3" max-width="1200" class="mx-auto">
     <v-layout row wrap>
       <v-app-bar color="blue-darken-1">
-        <template v-slot:append>
-          <h1>Hola</h1>
-        </template>
         <template v-slot:prepend>
-          <h1>Hola2</h1>
+          <v-btn :to="{ name: 'home' }"> Bienes Raíces - VueFire </v-btn>
+        </template>
+        <template v-slot:append>
+          <v-btn :to="{ name: 'home' }">Inicio</v-btn>
+          <v-btn :to="{ name: 'login' }">Iniciar Sesión</v-btn>
         </template>
       </v-app-bar>
       <v-main>
